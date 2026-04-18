@@ -220,7 +220,7 @@ cargo test --workspace -- --nocapture  # With output
 
 ## License
 
-MIT OR Apache-2.0
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE))
 
 ## Contributing
 
