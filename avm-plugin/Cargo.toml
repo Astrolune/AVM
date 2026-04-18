@@ -1,0 +1,18 @@
+[package]
+name = "avm-plugin"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Plugin system for Astrolune Virtual Machine"
+
+[dependencies]
+avm-core = { path = "../avm-core" }
+tokio = { workspace = true }
+async-trait = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }

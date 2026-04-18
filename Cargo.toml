@@ -1,0 +1,38 @@
+[workspace]
+members = [
+    "avm-core",
+    "avm-runtime",
+    "avm-sandbox",
+    "avm-plugin",
+    "avm-ipc",
+    "avm-examples",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["Astrolune Team"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/astrolune/avm"
+
+[workspace.dependencies]
+tokio = { version = "1.49", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+anyhow = "1.0"
+async-trait = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true

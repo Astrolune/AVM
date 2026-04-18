@@ -1,0 +1,22 @@
+[package]
+name = "avm-examples"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Examples for Astrolune Virtual Machine"
+publish = false
+
+[[example]]
+name = "basic_usage"
+path = "examples/basic_usage.rs"
+
+[dependencies]
+avm-core = { path = "../avm-core" }
+avm-runtime = { path = "../avm-runtime" }
+tokio = { workspace = true }
+tracing-subscriber = { workspace = true }
+async-trait = { workspace = true }
+serde_json = { workspace = true }
